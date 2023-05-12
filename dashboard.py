@@ -33,10 +33,10 @@ def audience_simple(country):
 #load data
 @st.cache_data
 def load_data():
-    df_ag = pd.read_csv("video-data/Aggregated_Metrics_By_Video.csv", encoding='utf-8').iloc[1:, :]
-    df_ag_sub = pd.read_csv("video-data/Aggregated_Metrics_By_Country_And_Subscriber_Status.csv")
-    df_comments = pd.read_csv("video-data/All_Comments_Final.csv")
-    df_time = pd.read_csv("video-data/Video_Performance_Over_Time.csv")
+    df_ag = pd.read_csv("Aggregated_Metrics_By_Video.csv", encoding='utf-8').iloc[1:, :]
+    df_ag_sub = pd.read_csv("Aggregated_Metrics_By_Country_And_Subscriber_Status.csv")
+    df_comments = pd.read_csv("All_Comments_Final.csv")
+    df_time = pd.read_csv("Video_Performance_Over_Time.csv")
     df_ag.columns = ['Video', 'Video title', 'Video publish time', 'Comments added', 'Shares', 'Dislikes', 'Likes', 'Subscribers lost', 'Subscribers gained', 
                     'RPM(USD)', 'CPM(USD)', 'Average percentage viewed(%)', 'Average view duration', 'Views', 'Watch time(hours)', 'Subscribers', 
                     'Your estimated revenue(USD)', 'Impressions', 'Impressions click-through rate(%)']
